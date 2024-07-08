@@ -27,11 +27,11 @@ add_routes(
     path="/openai",
 )
 
-prompt = ChatPromptTemplate.from_template("tell me a joke about {topic}")
+prompt = ChatPromptTemplate.from_template("Describe what is your website {topic}")
 add_routes(
     app,
     prompt | model,
-    path="/joke",
+    path="/website",
 )
 
 if __name__ == "__main__":
