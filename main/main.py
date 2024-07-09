@@ -2,6 +2,9 @@ import os
 from dotenv import load_dotenv
 from pathlib import Path
 import logging
+from main.frontEndComponents.agents_interface import Agent
+from main.frontEndComponents.html_agent.html_agent import HTMLAgent
+from main.frontEndComponents.prompt import HTML_PROMPT_INPUT
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -15,7 +18,7 @@ def main():
     """
     load_environment()
     print("Hello and welcome to the application!")
-    print("Testing the backend agent")
+    HTMLAgent.test(HTML_PROMPT_INPUT)
 
 
 def load_environment():

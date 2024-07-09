@@ -14,14 +14,14 @@ class Agent(ABC):
         functionality of the agent.
         :return: the agent executor
         """
+        print("I am in initialization method!")
         llm = ChatOpenAI(temperature=0.9, model="gpt-4-turbo")
         agent = create_react_agent(prompt=self.prompt, llm=llm, tools=self.tools)
         agent_executor = AgentExecutor(agent=agent, tools=self.tools, verbose=True)
         return agent_executor
 
-    @abstractmethod
     @classmethod
-    def agent_wrapper(cls):
+    def agent_wrapper(cls, prompt):
         """
         This method is responsible for executing the agent.
         :return: the result of the invoke function
