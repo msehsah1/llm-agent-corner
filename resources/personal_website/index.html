@@ -1,0 +1,96 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal Website</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                color: #333;
+            }
+            header {
+                background-image: url('header-bg.jpg');
+                background-size: cover;
+                background-position: center;
+                height: 400px;
+                color: white;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            header h1 {
+                margin: 0;
+                font-size: 40px;
+                padding: 20px;
+            }
+            nav {
+                background-color: #333;
+                color: white;
+                text-align: center;
+                padding: 10px 0;
+            }
+            nav a {
+                color: white;
+                text-decoration: none;
+                padding: 10px 20px;
+                display: inline-block;
+            }
+            .content {
+                padding: 20px;
+            }
+            footer {
+                background-color: #333;
+                color: white;
+                text-align: center;
+                padding: 10px 0;
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+            }
+            .gallery img {
+                width: 30%;
+                padding: 5px;
+                box-sizing: border-box;
+                transition: transform 0.2s;
+            }
+            .gallery img:hover {
+                transform: scale(1.1);
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>John Doe</h1>
+        </header>
+        <nav>
+            <a href="#bio">Biography</a>
+            <a href="#hobbies">Hobbies</a>
+            <a href="#gallery">Gallery</a>
+        </nav>
+        <div class="content" id="bio">
+            <h2>Biography</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="content" id="hobbies">
+            <h2>Hobbies</h2>
+            <p>Passionate about Photography, Hiking, and Coding.</p>
+        </div>
+        <div class="content gallery" id="gallery">
+            <h2>Photo Gallery</h2>
+            <img src="photo1.jpg" alt="Hobby 1">
+            <img src="photo2.jpg" alt="Hobby 2">
+            <img src="photo3.jpg" alt="Hobby 3">
+        </div>
+        <footer>
+            <p>Connect with me on <a href="https://facebook.com" style="color: white;">Facebook</a>, 
+            <a href="https://twitter.com" style="color: white;">Twitter</a>, and 
+            <a href="https://instagram.com" style="color: white;">Instagram</a>.</p>
+        </footer>
+    </body>
+    </html>
+    

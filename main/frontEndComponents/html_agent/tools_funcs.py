@@ -22,7 +22,7 @@ def create_html_files_wrapper(args):
     :param args: str representing the arguments in the form of a list
     :return: list with the html code and the filename
     """
-    args = args.literal_eval(args)
+    args = ast.literal_eval(args)
     html_code = args[0]
     filename = args[1]
     return create_html_files(html_code, filename)
@@ -32,7 +32,7 @@ def create_folder(foldername: str):
     """
     Create a new folder with a the specific foldername if it does not exist.
     """
-    path = "resources/" + foldername
+    path = "/resources/" + foldername
     try:
         if not os.path.exists(path):
             os.makedirs(path)
