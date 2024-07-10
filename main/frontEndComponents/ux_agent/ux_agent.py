@@ -1,9 +1,9 @@
 from main.frontEndComponents.agents_interface import Agent
 from main.utils.utils import override
-from main.frontEndComponents.prompt import REACT_AGENT_PROMPT, HTML_PROMPT_INSTRUCTION
+from main.frontEndComponents.prompt import REACT_AGENT_PROMPT, UX_AGENT_INSTRUCTION
 
 
-class HTMLAgent(Agent):
+class ux_agent(Agent):
     def __init__(self, prompt):
         super().__init__(prompt=prompt, tools="")
 
@@ -16,7 +16,11 @@ class HTMLAgent(Agent):
         :param prompt: prompt for the front end agent (instruction on what it will generate)
         :return: The result of the invoke method
         """
-        react_prompt = REACT_AGENT_PROMPT.partial(instruction=HTML_PROMPT_INSTRUCTION)
+        react_prompt = REACT_AGENT_PROMPT.partial(instruction=UX_AGENT_INSTRUCTION)
         html_inst = cls(react_prompt)
         html_agent_executor = html_inst.agent_init()
         return html_agent_executor.invoke(input=prompt)
+
+
+test = ux_agent()
+test.agent_wrapper()
